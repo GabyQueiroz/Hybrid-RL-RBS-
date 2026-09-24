@@ -6,8 +6,6 @@ This repository contains an anonymous code package for a hybrid irrigation-contr
 - Rule-Based System (RBS) logic for interpretable irrigation scheduling and comparison.
 - AquaCrop-OSPy simulations for crop-growth, water-use, and productivity evaluation.
 
-The repository is prepared for anonymous article submission. It does not include author names, institutional information, acknowledgements, or links to prior repositories.
-
 ## Hybrid Workflow
 
 The hybrid PPO+RBS workflow is organized around three stages:
@@ -31,7 +29,6 @@ The hybrid PPO+RBS workflow is organized around three stages:
 - `RL-PPO.py`: PPO-based reinforcement learning irrigation controller.
 - `CompareProductivity.py`: simulation-based comparison between RBS and RL/PPO irrigation strategies.
 - `irrigation_soil.py`: soil-moisture-oriented AquaCrop simulation support.
-- `RL-QL.py` and `RL-DQL.py`: auxiliary reinforcement-learning baselines retained from the code package.
 
 ## Requirements
 
@@ -41,18 +38,3 @@ Install the main dependencies with:
 pip install aquacrop gym numpy pandas torch matplotlib seaborn rule-engine openpyxl
 ```
 
-## Expected Input Data
-
-Some scripts expect local climate and sensor files, such as:
-
-- `dados_DV.xlsx`
-- `dados_clima.txt`
-- `dados_sensor.txt`
-
-These datasets are not embedded in the scripts. Place the required files in the repository root or adjust the file paths inside the scripts before running the experiments.
-
-## Reproducibility Notes
-
-- `RL-PPO.py` defines fixed random seeds for Python, NumPy, and PyTorch.
-- AquaCrop execution depends on the climate input data, crop parameters, soil configuration, and irrigation-management settings defined in each script.
-- Generated figures, tables, and trained-model artifacts should be treated as experiment outputs and can be regenerated from the scripts when the required datasets are available.
